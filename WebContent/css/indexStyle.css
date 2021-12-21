@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family:sans-serif;
+    }
+
+    body { min-height: 100vh; 
+           background: linear-gradient(to top right, #81ecec 0%, #0e6dc5 100%); 
+    } 
+
+    .loginForm {
+    position:absolute;
+    width:300px;
+    height:280px;
+    padding: 30px, 20px;
+    background-color:#FFFFFF;
+    text-align:center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-20%);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5); 
+    }
+
+    .idForm{
+    border-bottom: 1px solid #636e72;
+    margin: 30px;
+    padding: 5px 5px;
+    }
+
+    .passForm{
+    border-bottom: 1px solid #636e72;
+    margin: 30px;
+    padding: 5px 5px;
+    }
+
+    .stuId {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    font-family: 궁서;
+    height:25px;
+    background: none;
+    }
+
+    .stuPw {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    font-family: 궁서;
+    height:20px;
+    background: none;
+    }
+
+    .btn {
+    position:relative;
+    left:40%;
+    transform: translateX(-50%);
+    margin-bottom: 40px;
+    width:80%;
+    height:40px;
+    background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
+    background-position: left;
+    background-size: 200%;
+    color:white;
+    font-weight: bold;
+    border:none;
+    cursor:pointer;
+    transition: 0.3s;
+    display:inline;
+    }
+
+    .btn:hover {
+    background-position: right;
+    color : #6c5ce7;
+    }
+
+    .bottomText {
+    font-size:13px;
+    text-align: center;
+    }
+
+    footer {
+    width: 100%;
+    height: 90px;
+    bottom: 0px;
+    position: absolute;
+    padding-top: 15px;
+    font-size: 16px;
+    }
+
+    footer span {
+    margin-left: 80px;
+    color : black;
+    }
+
+    .add_header {
+        margin-top: 150px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .add_header_title {
+        margin-bottom: 40px;
+        font-size: 30px;
+        font-family: 궁서;
+        color : white;
+    }
+
+    .add_header_text {
+        width: 60%;
+        opacity: 0.7;
+        margin-bottom: 30px;
+        font-size: 25px;
+        font-family: 궁서;
+        color : white;
+    }

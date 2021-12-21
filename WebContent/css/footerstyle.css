@@ -1,0 +1,69 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+*{
+    font-family: Pretendard;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    border-collapse: collapse;
+}
+a:link{
+    color: #666;
+}
+a:visited{
+    color: #666;
+}
+img{
+    vertical-align: top;
+}
+#footer{
+    background-color: #333;
+    margin-top: 170px;
+    width: 100%;
+    padding: 70px 0;
+}
+.footer_1200{
+    width: 1200px;
+    margin: auto;
+}
+.footer_area{
+    padding-bottom: 45px;
+    height: 43px;
+}
+.footer_area .footer_logo{
+    float: left;
+    margin-right: 20px;
+}
+.footer_area li{
+    position: relative;
+    top: 7px;
+    display: inline-block;
+    margin-left: 35px;
+    font-size: 13px;
+}
+.footer_area li a{
+    color: #797979;
+}
+.footer_area li a::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 17px;
+    background: #797979;
+    position: absolute;
+    top: 0;
+    right: -20px;
+}
+.footer_area li:last-child a::after{
+    display: none;
+}
+.footer_information span{
+    font-size: 13px;
+    color: #aaa;
+    margin: 0 10px 0 0;
+}
+.footer_information .copyright{
+    font-size: 13px;
+    color: #797979;
+    margin-top: 8px;
+}

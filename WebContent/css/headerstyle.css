@@ -1,0 +1,108 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+*{
+    font-family: Pretendard;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    border-collapse: collapse;
+}
+a:link{
+    color: #666;
+}
+a:visited{
+    color: #666;
+}
+img{
+    vertical-align: top;
+}
+input:focus{
+    outline: none;
+}
+#header{
+    position: fixed;
+}
+.header_img{
+    text-align: center;
+}
+.header_img a{
+    display: block;
+}
+.header_area{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 35px 0;
+    position: relative;
+}
+.search_bar{
+    border: 1px solid #cccccc;
+    width: 327px;
+    height: 43px;
+    position: absolute;
+}
+.search_bar .search_text{
+    border: none;
+    height: 43px;
+    width: 268px;
+    padding: 0 0 0 15px;
+}
+.search_bar .search_text::placeholder{
+    color: #ccc;
+}
+.search_bar .search_icon{
+    position: absolute;
+    right: 0px;
+    width: 43px;
+    height: 43px;
+    border: none;
+    border-left: 1px solid #ccc;
+    background: url(/img/ico-search.png) no-repeat center;
+    cursor: pointer;
+    background-color: white;
+}
+.logo{
+    position: relative;
+    width: 205px;
+    margin: 0 auto;
+}
+.top_menu{
+    position: absolute;
+    top: 45px;
+    right: 0;
+}
+.top_menu > .top_menu_icon li{
+    float: left;
+    margin-left: 30px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.top_menu > .top_menu_icon li img{
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.menu_bar{
+    text-align: center;
+    width: 100%;
+}
+.meau_bar_list{
+    position: relative;
+    width: 1200px;
+    height: 67px;
+    margin: auto;
+}
+.meau_bar_list li{
+    position: relative;
+    line-height: 63px;
+    display: inline-block;
+    margin-left: 81px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.meau_bar_list li:first-child{
+    margin-left: 0;
+}
+.line{
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+}
