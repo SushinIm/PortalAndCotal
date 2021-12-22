@@ -12,12 +12,14 @@
         <div class="logo">
             <h1><a href="/index"><img src="/img/logo.png"></a></h1>
         </div>
+        <%if(session.getAttribute("std") != null){ %>
         <div class="top_menu">
             <ul class="top_menu_icon">
                 <li><a href="/myPage"><img src="/img/mypage.png">MY PAGE</a></li>
-                <li><a href="#"><img src="/img/language.png">LANGUAGE</a></li>
+               	<li><a href="/logout"><img src="/img/language.png">LOGOUT</a></li>
             </ul>
         </div>
+        <%} %>
     </div>
     <div class="menu_bar">
         <hr class="line">

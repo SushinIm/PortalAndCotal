@@ -32,7 +32,7 @@
 	            <h2>수강신청</h2>
 	        </div>
 	        <div class="lectures">
-				<form method="post" action="/detailPage" name="toDetailFrm">
+				<form method="post" action="/lectureDetail" name="toDetailFrm">
 					<input type="hidden" name="lecNo" value="" />
 					<input type="hidden" name="subNo" value="" />
 					<jsp:useBean id="lectures" scope="request" class="java.util.ArrayList" type="java.util.List<com.mini.beans.LectureBean>" />
