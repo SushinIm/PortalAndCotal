@@ -83,7 +83,14 @@
 		                    <th class="list_in">취소하기</th>
 						</tr>
 					<%
-					    for(LectureBean lecture: curLectures) {
+						if(curLectures.size() == 0){
+					%>
+						<tr class="list_menu2">
+							<td colspan="4" class="list_in2">현재 신청되어 있는 과정이 없습니다.</td>
+						</tr>
+					<%
+						}else{
+					    	for(LectureBean lecture: curLectures) {
 					%>
 						<tr class="list_menu2">
 							<td class="list_in2"><%=lecture.getRowNo() %></td>	
@@ -92,6 +99,7 @@
 							<td class="list_in2"><a href="#" onclick="delIt(<%=lecture.getLecNo() %>, <%=lecture.getIncNo() %>, <%=lecture.getNowStu() %>)">취소하기</a></td>	
 						</tr>
 					<%
+					    	}
 					    }
 					%>
 					</table>
@@ -111,7 +119,14 @@
 	                    <th class="list_in">등급</th>
 					</tr>
 				<%
-				    for(LectureBean lecture: preLectures) {
+					if(preLectures.size() == 0){
+				%>
+					<tr class="list_menu2">
+						<td colspan="4" class="list_in2">현재 신청되어 있는 과정이 없습니다.</td>
+					</tr>
+				<%
+					}else{
+				    	for(LectureBean lecture: preLectures) {
 				%>
 					<tr class="list_menu2">
 						<td class="list_in2"><%=lecture.getRowNo() %></td>	
@@ -120,6 +135,7 @@
 						<td class="list_in2"><%=lecture.getIncGrade() %></td>	
 					</tr>
 				<%
+				    	}
 				    }
 				%>
 				</table>

@@ -44,7 +44,14 @@
 		                    <th class="list_in">신청하기</th>
 		                </tr>
 						<%
-						    for(LectureBean lecture: lectures) {
+							if(lectures.size() == 0){
+						%>
+							<tr class="list_menu2">
+								<td colspan="4" class="list_in2">현재 신청되어 있는 과정이 없습니다.</td>
+							</tr>
+						<%
+							}else{
+						    	for(LectureBean lecture: lectures) {
 						%>
 		                <tr class="list_menu2">
 		                    <td class="list_in2"><%=lecture.getRowNo() %></td>
@@ -53,6 +60,7 @@
 		                    <td class="list_in2"><a href="#" onclick="getReady(<%=lecture.getLecNo()%>, <%=lecture.getSubNo()%>)">신청하기</a></td>
 		                </tr>
 						<%
+						    	}
 						    }
 						%>
 		            </table>

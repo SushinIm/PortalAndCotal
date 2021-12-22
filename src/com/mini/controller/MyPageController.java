@@ -26,17 +26,26 @@ public class MyPageController extends HttpServlet {
     }
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
 		HttpSession session = request.getSession();
-		StudentBean stb = (StudentBean)session.getAttribute("std");
-		List<LectureBean> clb = new MyPageDAO().selectCurLectureList(stb.getStuId());
-		List<LectureBean> plb = new MyPageDAO().selectPreLectureList(stb.getStuId());
+		RequestDispatcher rd = null;
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/myPage.jsp");
-		
-		request.setAttribute("student", stb);
-		request.setAttribute("curLectures", clb);
-		request.setAttribute("preLectures", plb);
-		
+		if(session.getAttribute("std") == null) {
+			rd = request.getRequestDispatcher("/msg.jsp");
+			request.setAttribute("msg", "로그인이 필요합니다.");
+			request.setAttribute("loc", "/indexPage.jsp");
+		}else {
+			rd = request.getRequestDispatcher("/myPage.jsp");
+
+			StudentBean stb = (StudentBean)session.getAttribute("std");
+			List<LectureBean> clb = new MyPageDAO().selectCurLectureList(stb.getStuId());
+			List<LectureBean> plb = new MyPageDAO().selectPreLectureList(stb.getStuId());
+			
+			request.setAttribute("student", stb);
+			request.setAttribute("curLectures", clb);
+			request.setAttribute("preLectures", plb);
+			
+		}
 		rd.forward(request, response);	
 	}
 }
