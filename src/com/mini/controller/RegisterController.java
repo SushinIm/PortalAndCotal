@@ -28,22 +28,26 @@ public class RegisterController extends HttpServlet {
 		HttpSession session = request.getSession();
 		String action = request.getRequestURI();
 
-		int nowStu = Integer.parseInt(request.getParameter("nowStu")); 
 		StudentBean std = (StudentBean) session.getAttribute("std");
-		String lecNo = request.getParameter("lecNo");
 		String stuid = std.getStuId();
+
+		int nowStu = Integer.parseInt(request.getParameter("nowStu")); 
+		String lecNo = request.getParameter("lecNo");
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/msg.jsp");
 		request.setAttribute("loc", "/index");
 		
 		if("/registerClass".equals(action)) {
-			rgt = new RegisterDAO().insertClass(lecNo, stuid, nowStu);
+			int subScore = Integer.parseInt(request.getParameter("subScore"));
+			rgt = new RegisterDAO().insertClass(lecNo, stuid, nowStu, subScore);
 			
-			if(rgt == 1){
+			if(rgt > 0){
 				request.setAttribute("msg","수강신청이 등록되었습니다.");
 			}
-			else if(rgt <= 0){
+			else if(rgt == 0){
 				request.setAttribute("msg","수강신청 등록에 실패했습니다.");
+			}else {
+				request.setAttribute("msg", "최대 학점을 초과합니다.");
 			}
 		}else if("/deleteClass".equals(action)) {
 			String incNo = request.getParameter("incNo");

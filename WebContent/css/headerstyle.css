@@ -15,12 +15,18 @@ a:visited{
 }
 img{
     vertical-align: top;
+    max-width: 100%;
 }
 input:focus{
     outline: none;
 }
 #header{
     position: fixed;
+    width:100%;
+    top:0px;
+    left:0px;
+    z-index: 50;
+    background-color: #fff;
 }
 .header_img{
     text-align: center;

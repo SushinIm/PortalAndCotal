@@ -1,0 +1,70 @@
+#wrap{
+    width: 100%;
+    position: relative;
+    padding: 230px 0 0 0;
+  }
+#contents{
+    margin: auto;
+    width: 1200px;
+}
+.login_title{
+    text-align: center;
+    margin: 80px 0 80px;
+}
+.login_title h2{
+    color: #666;
+    font-size: 28px;
+    font-weight: 600;
+}
+.login_box{
+    margin: auto;
+    width: 460px;
+    text-align: center;
+}
+.stuId{
+    width: 445px;
+    height: 58px;
+    display: block;
+    border: 1px solid #ccc;
+    margin-bottom: 8px;
+    padding-left: 15px;
+}
+.stuId::placeholder{
+    font-size: 15px;
+    color: #c7c7c7;
+    font-weight: 400;
+}
+.stuPw{
+    width: 445px;
+    height: 58px;
+    display: block;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+}
+.stuPw::placeholder{
+    font-size: 15px;
+    color: #c7c7c7;
+    font-weight: 400;
+}
+.btn{
+    margin-top: 30px;
+    width: 460px;
+    height: 58px;
+    background-color: #111;
+    border: none;
+    border-radius: 5px;
+    color: #ccc;
+    font-size: 15px;
+    font-weight: 600;
+}
+.login_line{
+    width: 460px;
+    height: 1px;
+    background-color: #ebebeb;
+    margin: 22px 0 20px 0;
+}
+.login_box a{
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+}

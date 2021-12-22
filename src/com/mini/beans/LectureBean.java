@@ -15,7 +15,8 @@ public class LectureBean {
 	private String lecRoom;
 	private String lecUseYn;
 	private String subName;
-	
+	private String incGrade;
+	private String incNo;
 	public int getRowNo() {
 		return rowNo;
 	}
@@ -99,6 +100,18 @@ public class LectureBean {
 	}
 	public void setSubName(String subName) {
 		this.subName = subName;
+	}
+	public String getIncGrade() {
+		return incGrade;
+	}
+	public void setIncGrade(String incGrade) {
+		this.incGrade = incGrade;
+	}
+	public String getIncNo() {
+		return incNo;
+	}
+	public void setIncNo(String incNo) {
+		this.incNo = incNo;
 	}
 	
 }

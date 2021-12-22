@@ -14,7 +14,8 @@ public class LoginDAO {
 		StudentBean sb = null;
 		Connection conn = null;
 		ResultSet rs = null;
-		String sql = "select stuId, stuName, stuStat, stuGrade, stuDept from student where stuId = ? and stuPw = ?";
+		String sql = "select stuId, stuName, stuStat, stuGrade, stuDept, ifnull(stuPhone, '공란') as stuPhone, stuEmail "
+				+	"from student where stuId = ? and stuPw = ?";
 		
 		try {
 			conn = DBConn.getConnection();
@@ -28,9 +29,19 @@ public class LoginDAO {
 				sb = new StudentBean();
 				sb.setStuId(rs.getString("stuId"));
 				sb.setStuName(rs.getString("stuName"));	
-				sb.setStuStat(rs.getString("stuStat"));	
+				if("1".equals(rs.getString("stuStat"))) {
+					sb.setStuStat("재학");
+				}else if("2".equals(rs.getString("stuStat"))) {
+					sb.setStuStat("휴학");
+				}else if("3".equals(rs.getString("stuStat"))) {
+					sb.setStuStat("졸업");
+				}else {
+					sb.setStuStat("자퇴");
+				}
 				sb.setStuGrade(rs.getString("stuGrade"));	
-				sb.setStuDept(rs.getString("stuDept"));	
+				sb.setStuDept(rs.getString("stuDept"));
+				sb.setStuPhone(rs.getString("stuPhone"));
+				sb.setStuEmail(rs.getString("stuEmail"));
 			}
 		}
 		catch(Exception e){ 

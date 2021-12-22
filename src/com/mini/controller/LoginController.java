@@ -50,7 +50,7 @@ public class LoginController extends HttpServlet {
 			if(std != null){
 				session.setAttribute("std", std);
 			}
-		}else if("/logOut".equals(action)) {
+		}else if("/logout".equals(action)) {
 			session.invalidate();
 		}
 		
